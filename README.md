@@ -1,9 +1,9 @@
-# Howto generating files at build Time with CMake
+# Howto generating files at build time with CMake
 
 Thanks to [Craig Scott](https://crascit.com/author/crascit/) for his Blog!
 
 
-## A modified example from https://crascit.com/2017/04/18/generated-sources-in-cmake-builds/
+## A modified example from [https://crascit.com](https://crascit.com/2017/04/18/generated-sources-in-cmake-builds/)
 
 
 Instead of using [add_custom_target()](https://cmake.org/cmake/help/latest/command/add_custom_target.html)
@@ -19,11 +19,11 @@ if you are intrested.
 
 ## CMake and Ninja can generate graphviz files showing the dependencies between the targets in a project
 
+This dependency trees [DAG](https://en.wikipedia.org/wiki/Directed_acyclic_graph) are generated with this
+[CMakeLists.txt](CMakeLists.txt) and **dot**, a tool from [graphviz](https://graphviz.org/Gallery/directed/ninja.html)
+
 ![Image](MyProj.jpg "CMake generated graphviz")
 
 ![Image](deps.jpg "Ninja generated dependency tree")
 
-
-This dependency trees [https://en.wikipedia.org/wiki/Directed_acyclic_graph](DAG) are generated with this
-[CMakeLists.txt](CMakeLists.txt) and **dot**, a tool from [https://graphviz.org/Gallery/directed/ninja.html](graphviz)
 
