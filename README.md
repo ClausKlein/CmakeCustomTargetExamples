@@ -19,9 +19,9 @@ CMake tips) if you are interesed.
 
 ## CMake and Ninja can generate graphviz files showing the dependencies between the targets in a project
 
-see [CMake generated](MyProj.svg)
+see [CMake generated](MyProj.svg "graphviz")
 
-and [Ninja generated](deps.svg)
+and [Ninja generated](deps.svg "dependency tree")
 
 
 This dependency trees [DAG](https://en.wikipedia.org/wiki/Directed_acyclic_graph) are generated with this
