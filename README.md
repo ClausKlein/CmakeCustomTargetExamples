@@ -1,29 +1,29 @@
-# Howto generating files at build Time with CMake
+# Howto generating files at build time with CMake
 
 Thanks to [Craig Scott](https://crascit.com/author/crascit/) for his Blog!
 
 
-## A modified example from https://crascit.com/2017/04/18/generated-sources-in-cmake-builds/
+## A modified example from [https://crascit.com](https://crascit.com/2017/04/18/generated-sources-in-cmake-builds/)
 
-Instead of using [https://cmake.org/cmake/help/latest/command/add_custom_target.html](add_custom_target)
+
+Instead of using [add_custom_target()](https://cmake.org/cmake/help/latest/command/add_custom_target.html)
 to generate the sources manually, you should define custom `OUTPUTS <files>` with `DEPENDS <files>` using
-[https://cmake.org/cmake/help/latest/command/add_custom_command.html](add_custom_command).
+[add_custom_command()](https://cmake.org/cmake/help/latest/command/add_custom_command.html).
 
 CMake can then automatically work out dependencies when those outputs are used as inputs to another target.
 
 
-Sam Thursfield has
-[https://samthursfield.wordpress.com/2015/11/21/cmake-dependencies-between-targets-and-files-and-custom-commands/](more
-CMake tips) if you are interesed.
+[Sam Thursfield has more CMake tips](https://samthursfield.wordpress.com/2015/11/21/cmake-dependencies-between-targets-and-files-and-custom-commands/)
+if you are intrested.
 
 
 ## CMake and Ninja can generate graphviz files showing the dependencies between the targets in a project
 
-see [CMake generated](MyProj.svg)
-
-and [Ninja generated](deps.svg)
-
-
 This dependency trees [DAG](https://en.wikipedia.org/wiki/Directed_acyclic_graph) are generated with this
 [CMakeLists.txt](CMakeLists.txt) and **dot**, a tool from [graphviz](https://graphviz.org/Gallery/directed/ninja.html)
+
+![Image](MyProj.jpg "CMake generated graphviz")
+
+![Image](deps.jpg "Ninja generated dependency tree")
+
 
